@@ -11,8 +11,13 @@
     page in the iframe below. Set the iframe's `src` attribute to a URL will cause it to render the page.
     HINT: Lookup .attr()
     */
-    $(function() {
-      // Write code here
+    $(function () {
+      $('a').on('click',(e)=>{
+       e.preventDefault();
+       $('#iframe').attr('src', e.target)
+      })
+
+      // write your code here
     });
     </script>
   </head>

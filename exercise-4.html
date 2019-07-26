@@ -7,10 +7,17 @@
     <script>
     /*
     When the clear button is clicked, clear the text field.
-    When the save button is clicked, take the text value inside the text field, and append a new <li> element to the #log with the entered text value.
+    When the save button is clicked, take the text value inside the text field, 
+    and append a new <li> element to the #log with the entered text value.
     HINT: lookup .val()
     */
     $(function () {
+      $('#clear-button').on('click',(e)=>{
+       $('#text-field').val('')
+      })
+      $('#save-button').on('click',(e)=>{
+        $('#log').append(('<li>'+$('#text-field').val()+'</li>'))
+      })
       // write your code here
     });
     </script>
